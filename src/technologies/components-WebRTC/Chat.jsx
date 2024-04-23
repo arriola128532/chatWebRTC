@@ -42,7 +42,7 @@ const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
   const [messages, setMessages] = useState({});
 
   useEffect(() => {
-    webSocket.current = new WebSocket('ws://192.168.102.75:8080');
+    webSocket.current = new WebSocket('wss://192.168.102.75:8080');
     webSocket.current.onmessage = message => {
       const data = JSON.parse(message.data);
       setSocketMessages(prev => [...prev, data]);
