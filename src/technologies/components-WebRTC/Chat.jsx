@@ -42,7 +42,7 @@ const Chat = ({ connection, updateConnection, channel, updateChannel }) => {
   const [messages, setMessages] = useState({});
 
   useEffect(() => {
-    webSocket.current = new WebSocket('ws://localhost:5050');
+    webSocket.current = new WebSocket('wss://arriola128532.github.io/serverWebRTC/');
     webSocket.current.onmessage = message => {
       const data = JSON.parse(message.data);
       setSocketMessages(prev => [...prev, data]);
