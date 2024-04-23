@@ -23,7 +23,7 @@ const MessageBox = ({ messages, connectedTo, message, setMessage, sendMsg, name 
         <Card fluid>
           <Card.Content
             header={
-              !!connectedTo ? connectedTo : "Not chatting with anyone currently"
+              !!connectedTo ? connectedTo : "No hay ningún chat seleccionado actualmente"
             }
           />
           <Card.Content>
